@@ -24,16 +24,16 @@ body {
     align-items: center;
     justify-content: start;
     overflow: hidden;
-    padding: 4px;
 }
 
 .loading .bar-loading {
+    line-height: 150%;
     width: 0;
     height: 100%;
     text-align: center;
     background-color: #55b9f3;
     border-radius: 25px;
-    transition: width 0.1s ease;
+    transition: width 0.05s ease;
 }
 
 
