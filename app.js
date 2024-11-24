@@ -1,5 +1,26 @@
 import { presentes } from "./modulos/presentes.js";
 
+document.addEventListener(`DOMContentLoaded`, () => {
+
+    let width = 0
+
+    let interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval)
+            document.getElementById(`header`).style.display = "flex"
+            document.getElementById(`lista-de-presentes`).style.display = "flex"
+            document.getElementById(`loading`).style.display = "none !important"
+        } else {
+            width++
+            document.getElementById(`loadingText`).style.width = width + "%"
+            document.getElementById(`loadingText`).innerText = width + "%"
+        }
+    }, 10);
+})
+
+
+
+
 // Função para criar o HTML de um produto
 function createProductHTML(presente, index) {
     const presenteDiv = document.createElement('div');
