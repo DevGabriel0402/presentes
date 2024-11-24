@@ -9,13 +9,13 @@ document.addEventListener(`DOMContentLoaded`, () => {
             clearInterval(interval)
             document.getElementById(`header`).style.display = "flex"
             document.getElementById(`lista-de-presentes`).style.display = "flex"
-            document.getElementById(`loading`).style.display = "none !important"
+            document.getElementById(`loading`).style.display = "none"
         } else {
             width++
-            document.getElementById(`loadingText`).style.width = width + "%"
+            document.querySelector(`.bar-loading`).style.width = width + "%"
             document.getElementById(`loadingText`).innerText = width + "%"
         }
-    }, 10);
+    }, 30);
 })
 
 
